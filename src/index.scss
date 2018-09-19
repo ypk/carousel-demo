@@ -1,4 +1,6 @@
 @import "~reset-scss/reset";
+@import "styles/typography";
+@import "styles/variables";
 
 @at-root {
   @-ms-viewport { width: device-width; }
@@ -13,6 +15,9 @@ html {
 }
 
 body{
+  color: $color-black;
+  font-size: $font-size-base;
+  font-family: 'Ropa Sans',Arial,Helvetica,sans-serif;
   line-height: 1.4;
   font-smoothing: antialiased;
 }
