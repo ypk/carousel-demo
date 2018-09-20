@@ -1,6 +1,4 @@
-@import "~reset-scss/reset";
-@import "styles/typography";
-@import "styles/variables";
+@import "styles/imports";
 
 @at-root {
   @-ms-viewport { width: device-width; }

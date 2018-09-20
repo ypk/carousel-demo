@@ -23,6 +23,17 @@ class App extends Component {
       throw new Error(err);
     })
   }
+  onItemClick (event) {
+    let actionId = event.currentTarget.dataset.actionId;
+
+    if(actionId === "prev"){
+      console.log("prev clicked");
+      // add code to move slider - 1
+    }else if(actionId === "next"){
+      console.log("next clicked");
+      // add code to move slider + 1
+    }
+  }
   render() {
     return (
       <div className = "slider-container">
@@ -31,10 +42,14 @@ class App extends Component {
         </div>
         <div className = "slider-controls">
           <div className = "button-container">
-            <div className = "btn prev" style={{backgroundImage: `url(${arrowAssetPath})`}} />
+            <div onClick={this.onItemClick} data-action-id="prev" className = "btn prev" style={{backgroundImage: `url(${arrowAssetPath})`}}>
+              <span>Prev</span>
+            </div>
           </div>
           <div className = "button-container">
-            <div className = "btn next" style={{backgroundImage: `url(${arrowAssetPath})`}} />
+            <div onClick={this.onItemClick} data-action-id="next" className = "btn next" style={{backgroundImage: `url(${arrowAssetPath})`}}>
+              <span>Next</span>
+            </div>
           </div>
         </div>
       </div>
