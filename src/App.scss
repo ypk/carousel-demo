@@ -55,7 +55,14 @@
 }
 
 .btn {
+  span {
+    display: none;
+  }
+
   @media only screen and (min-width: $lg) {
+    span {
+      display: block;
+    }
     color: $color-white;
     cursor: pointer;
     background: $color-blue;
