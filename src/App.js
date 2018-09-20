@@ -36,22 +36,28 @@ class App extends Component {
   }
   render() {
     return (
-      <div className = "slider-container">
-        <div className = "slider">
-          {this.state.imageListCarousel}
-        </div>
-        <div className = "slider-controls">
-          <div className = "button-container">
-            <div onClick={this.onItemClick} data-action-id="prev" className = "btn prev" style={{backgroundImage: `url(${arrowAssetPath})`}}>
-              <span>Prev</span>
+      <div className = "container">
+        <header className = "header">
+          <h1>Carousel Demo</h1>
+        </header>
+        <div className = "slider-container">
+          <div className = "slider">
+            {this.state.imageListCarousel}
+          </div>
+          <div className = "slider-controls">
+            <div className = "button-container">
+              <div title="Prev" onClick={this.onItemClick} data-action-id="prev" className = "btn prev" style={{backgroundImage: `url(${arrowAssetPath})`}}>
+                <span>Prev</span>
+              </div>
+            </div>
+            <div className = "button-container">
+              <div title="Next" onClick={this.onItemClick} data-action-id="next" className = "btn next" style={{backgroundImage: `url(${arrowAssetPath})`}}>
+                <span>Next</span>
+              </div>
             </div>
           </div>
-          <div className = "button-container">
-            <div onClick={this.onItemClick} data-action-id="next" className = "btn next" style={{backgroundImage: `url(${arrowAssetPath})`}}>
-              <span>Next</span>
-            </div>
-          </div>
         </div>
+
       </div>
     );
   }

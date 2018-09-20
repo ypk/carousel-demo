@@ -1,5 +1,6 @@
 @import "styles/imports";
 
+/*
 .slider {
   position: relative;
   width: 100%;
@@ -25,6 +26,7 @@
   display: block;
 }
 
+*/
 .slider-controls {
     display: flex;
     margin: 0px auto;
@@ -36,6 +38,26 @@
 
 .btn{
   @media only screen and (min-width: $lg) {
+    color: $color-white;
+    cursor: pointer;
+    background: $color-blue;
     background-image: none !important;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    margin: 0px 2px;
+    padding: 6px 10px;
+  }
+}
+
+.prev {
+  @media only screen and (min-width: $lg) {
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+  }
+}
+.next {
+  @media only screen and (min-width: $lg) {
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
   }
 }

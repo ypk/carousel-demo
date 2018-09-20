@@ -5,19 +5,25 @@
 }
 
 html {
-  box-sizing: border-box;
   -ms-overflow-style: scrollbar;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
   font-size: 100%;
   overflow-y: scroll;
-  -webkit-text-size-adjust: 100%;
 }
 
 body{
-  color: $color-black;
-  font-size: $font-size-base;
+  background-color: $color-gray;
+  color: $color-blue;
   font-family: 'Ropa Sans',Arial,Helvetica,sans-serif;
-  line-height: 1.4;
+  font-size: $font-size-base;
   font-smoothing: antialiased;
+  line-height: 1.4;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
 *,
