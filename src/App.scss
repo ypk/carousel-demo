@@ -1,5 +1,8 @@
 @import "styles/imports";
 
+.header {
+  margin: 15px;
+}
 /*
 .slider {
   position: relative;
@@ -28,15 +31,30 @@
 
 */
 .slider-controls {
-    display: flex;
-    margin: 0px auto;
-    @media only screen and (min-width: $lg) {
-      width: 1200px;
-    }
-    place-content: center;
+  display: flex;
+  margin: 25px auto;
+  @media only screen and (min-width: $lg) {
+    width: 1200px;
+  }
+  place-content: center;
 }
 
-.btn{
+.slider {
+  width: 100%;
+  background: $color-white;
+  height: 380px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.slide {
+  height: 320px;
+  width: 350px;
+  margin: 30px 15px;
+  display: inline-flex;
+}
+
+.btn {
   @media only screen and (min-width: $lg) {
     color: $color-white;
     cursor: pointer;
@@ -44,7 +62,7 @@
     background-image: none !important;
     font-family: 'Roboto Slab', serif;
     font-weight: bold;
-    margin: 0px 2px;
+    margin: 0 2px;
     padding: 6px 10px;
   }
 }
@@ -55,6 +73,7 @@
     border-bottom-left-radius: $border-radius;
   }
 }
+
 .next {
   @media only screen and (min-width: $lg) {
     border-top-right-radius: $border-radius;
